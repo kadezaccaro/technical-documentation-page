@@ -10,12 +10,12 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: white;
-  margin-left: 500px; /* width of navbar */
+  background-color: #e5e5e5;
+  color: black;
+  margin-left: 450px; /* same width of navbar */
   padding: 50px;
 }
 
@@ -24,16 +24,18 @@ a {
 }
 
 #navbar {
-  background-color: black;
-  width: 500px;
+  width: 450px;
   height: 100%;
-  border-right: 2px solid white;
+  border-right: 2px solid #185adb;
   position: fixed;
+  display: block;
+  overflow: auto;
+  z-index: 10;
   top: 0px;
   left: 0px;
 }
 #navbar a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 #navbar ul {
@@ -45,7 +47,6 @@ a {
   font-size: 32px;
   border-top: 2px solid #185adb;
   padding: 20px;
-  text-transform: uppercase;
   text-align: center;
 }
 
@@ -53,19 +54,19 @@ header {
   margin: 0;
   padding: 50px;
   font-size: 52px;
+  line-height: 52px;
   color: #185adb;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .logotitle {
   text-align: center;
 }
 .highlight {
-  color: white;
+  color: black;
 }
-.footnote {
+.logotitle .footnote {
   font-size: 24px;
+  line-height: 24px;
 }
 
 .ref-note {
@@ -82,8 +83,8 @@ li {
 }
 
 code {
-  font-family: "Roboto", sans-serif;
-  color: white;
+  font-family: "Rubik", sans-serif;
+  color: black;
   display: block;
   font-size: 20px;
   margin: 20px;
@@ -99,15 +100,32 @@ img {
   height: auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+  body {
+    margin-left: 300px;
+  }
+  #navbar {
+    width: 300px;
+  }
+  header {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   body {
     margin-left: 0px;
+    padding: 20px;
   }
   #navbar {
     position: relative;
     width: 100%;
     height: 100%;
-    border: 2px solid white;
+    border: 2px solid #185adb;
     margin-bottom: 30px;
+  }
+  header {
+    padding: 50px 20px 50px 20px;
   }
 }
